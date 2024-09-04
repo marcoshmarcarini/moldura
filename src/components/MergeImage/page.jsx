@@ -15,12 +15,14 @@ const poppins = Poppins({
 export default function MergeImage() {
 
     const [imagem, setImagem] = useState('')
-    const [moldura, setMoldura] = useState('/img/moldura.png')
+    const [moldura, setMoldura] = useState('/img/perfil_peter10.png')
     const [imagemMesclada, setImagemMesclada] = useState(null)
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const [estilos, setEstilos] = useState('none')
 
+    const [personalizacao1, setPersonalizacao1]= useState([])
+    const [personalizacao2, setPersonalizacao2]= useState([])
 
 
     const uploadImage = (uploadEvent) => {
@@ -58,11 +60,63 @@ export default function MergeImage() {
                 const resizedImageUrl = canvas.toDataURL('image/jpeg')
                 setImagem(resizedImageUrl)
                 setEstilos('flex')
-            };
-        };
-
+            }
+        }
         reader.readAsDataURL(foto)
     }
+
+
+    const handleMoldura = () => {
+        if (imagem) {
+            return (
+                <div className={`flex flex-col gap-5 items-center justify-center text-center`}>
+                    <h2>Escolha a moldura</h2>
+                    <p>Clique na imagem e selecione a moldura desejada</p>
+                    <div className={`flex gap-5 items-center justify-center`}>
+                        <Image
+                            src="/img/perfil_peter10.png"
+                            width={150}
+                            height={150}
+                            alt=""
+                            onClick={() => {
+                                setMoldura('/img/perfil_peter10.png')
+                                setPersonalizacao1({
+                                    border: '1px solid var(--branco)',
+                                    transition: 'border 0.3s ease-in-out',
+                                    cursor: 'pointer',
+                                })
+                                setPersonalizacao2({
+                                    border: 'none',
+                                    transition: 'border 0.3s ease-in-out',
+                                })
+                            }}
+                            style={personalizacao1}
+                        />
+                        <Image
+                            src="/img/perfil_hashtag.png"
+                            width={150}
+                            height={150}
+                            alt=""
+                            onClick={() => {
+                                setMoldura('/img/perfil_hashtag.png')
+                                setPersonalizacao2({
+                                    border: '1px solid var(--branco)',
+                                    transition: 'border 0.3s ease-in-out',
+                                    cursor: 'pointer',
+                                })
+                                setPersonalizacao1({
+                                    border: 'none',
+                                    transition: 'border 0.3s ease-in-out',
+                                })
+                            }}
+                            style={personalizacao2}
+                        />
+                    </div>
+                </div>
+            )
+        }
+    }
+
 
     /**
      * Merge the images and save the result to the state
@@ -79,8 +133,6 @@ export default function MergeImage() {
                 y: 0
             }
         ]).then(b64 => setImagemMesclada(b64))
-
-        console.log(imagemMesclada)
     }
 
 
@@ -109,6 +161,8 @@ export default function MergeImage() {
                         className={styles.imagemUpfront}
                         style={{ display: estilos }}
                     />
+
+                    {handleMoldura()}
                 </div>
                 <button onClick={handleSave} className={styles.btnMoldura}>
                     Criar Moldura
@@ -118,8 +172,9 @@ export default function MergeImage() {
                         <Image
                             src={imagemMesclada}
                             alt="Imagem Mesclada"
-                            width={300}
-                            height={300}
+                            width={200}
+                            height={200}
+                            className={styles.imagemMesclada}
                         />
                         <a
                             href={imagemMesclada}

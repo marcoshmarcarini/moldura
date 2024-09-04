@@ -15,13 +15,6 @@
   --branco: #FFFFFF;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
 body {
   color: var(--branco);
@@ -31,6 +24,8 @@ body {
       var(--azul-claro)
     )
     var(--azul-escuro);
+    background-repeat: no-repeat;
+    background-size: 200vw 200vh;
 }
 
 @layer utilities {
