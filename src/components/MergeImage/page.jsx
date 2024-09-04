@@ -95,7 +95,7 @@ export default function MergeImage() {
                         htmlFor="inputUp"
                         className={styles.inputUpLabel}
                     >
-                        Upload da Imagem
+                        Clique aqui para anexar sua imagem
                     </label>
                     <input
                         type="file"
