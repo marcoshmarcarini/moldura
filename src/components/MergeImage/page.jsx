@@ -81,7 +81,7 @@ export default function MergeImage() {
                             onClick={() => {
                                 setMoldura('/img/perfil_peter10.png')
                                 setPersonalizacao1({
-                                    border: '1px solid var(--branco)',
+                                    border: '2px solid var(--branco)',
                                     transition: 'border 0.3s ease-in-out',
                                     cursor: 'pointer',
                                 })
@@ -91,6 +91,7 @@ export default function MergeImage() {
                                 })
                             }}
                             style={personalizacao1}
+                            className={styles.imgMoldura}
                         />
                         <Image
                             src="/img/perfil_hashtag.png"
@@ -100,7 +101,7 @@ export default function MergeImage() {
                             onClick={() => {
                                 setMoldura('/img/perfil_hashtag.png')
                                 setPersonalizacao2({
-                                    border: '1px solid var(--branco)',
+                                    border: '2px solid var(--branco)',
                                     transition: 'border 0.3s ease-in-out',
                                     cursor: 'pointer',
                                 })
@@ -110,6 +111,7 @@ export default function MergeImage() {
                                 })
                             }}
                             style={personalizacao2}
+                            className={styles.imgMoldura}
                         />
                     </div>
                 </div>
