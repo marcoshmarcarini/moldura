@@ -21,6 +21,11 @@ export default function Links() {
             texto: 'Crie sua moldura personalizada',
             icon: 'https://img.icons8.com/ios-filled/50/ffffff/portrait.png'
         },
+        {
+            url: '/peter/downloads/figurinhas.rar',
+            texto: 'Baixe nossas Figurinhas',
+            icon: 'https://img.icons8.com/ios-filled/50/ffffff/download.png'
+        }
     ]
 
 
