@@ -21,8 +21,8 @@ export default function MergeImage() {
     const ref2 = useRef(null)
     const [estilos, setEstilos] = useState('none')
 
-    const [personalizacao1, setPersonalizacao1]= useState([])
-    const [personalizacao2, setPersonalizacao2]= useState([])
+    const [personalizacao1, setPersonalizacao1] = useState([])
+    const [personalizacao2, setPersonalizacao2] = useState([])
 
 
     const uploadImage = (uploadEvent) => {
@@ -70,13 +70,14 @@ export default function MergeImage() {
         if (imagem) {
             return (
                 <div className={`flex flex-col gap-5 items-center justify-center text-center`}>
-                    <h2>Escolha a moldura</h2>
-                    <p>Clique na imagem e selecione a moldura desejada</p>
+                    
+                    <p className={styles.switchMoldura}>
+                       3) Escolha a moldura desejada clicando na imagem abaixo.</p>
                     <div className={`flex gap-5 items-center justify-center`}>
                         <Image
                             src="/img/perfil_peter10.png"
-                            width={150}
-                            height={150}
+                            width={100}
+                            height={100}
                             alt=""
                             onClick={() => {
                                 setMoldura('/img/perfil_peter10.png')
@@ -95,8 +96,8 @@ export default function MergeImage() {
                         />
                         <Image
                             src="/img/perfil_hashtag.png"
-                            width={150}
-                            height={150}
+                            width={100}
+                            height={100}
                             alt=""
                             onClick={() => {
                                 setMoldura('/img/perfil_hashtag.png')
@@ -142,14 +143,14 @@ export default function MergeImage() {
         <div className={`${poppins.className}`}>
             <div className={styles.molduraContent}>
                 <p className={styles.molduraTxt}>
-                    Insira sua uma foto e crie sua própria moldura personalizada
+                   1) Anexe uma imagem abaixo e crie sua moldura personalizada.
                 </p>
                 <div className={styles.inputContent}>
                     <label
                         htmlFor="inputUp"
                         className={styles.inputUpLabel}
                     >
-                        Clique aqui para anexar sua imagem
+                        2) Clique aqui para anexar sua imagem
                     </label>
                     <input
                         type="file"
@@ -157,36 +158,46 @@ export default function MergeImage() {
                         className={styles.inputUp}
                         id="inputUp"
                     />
-                    <img
-                        src={imagem}
-                        alt=""
-                        className={styles.imagemUpfront}
-                        style={{ display: estilos }}
-                    />
-
-                    {handleMoldura()}
-                </div>
-                <button onClick={handleSave} className={styles.btnMoldura}>
-                    Criar Moldura
-                </button>
-                {imagemMesclada && (
-                    <div className={styles.downloadArea}>
-                        <Image
-                            src={imagemMesclada}
-                            alt="Imagem Mesclada"
-                            width={200}
-                            height={200}
-                            className={styles.imagemMesclada}
+                    <div className={styles.imagemUpContent}>
+                        <img
+                            src={imagem}
+                            alt=""
+                            className={styles.imagemUpfront}
+                            style={{ display: estilos }}
                         />
-                        <a
-                            href={imagemMesclada}
-                            download="imagem_mesclada.png"
-                            className={styles.btnDownload}
-                        >
-                            Download
-                        </a>
+                        {imagemMesclada && (
+                            <div className={styles.imagemMescladaContent}>
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/ffffff/arrow.png" alt="arrow" />
+                                <Image
+                                    src={imagemMesclada}
+                                    alt="Imagem Mesclada"
+                                    width={100}
+                                    height={100}
+                                    className={styles.imagemMesclada}
+                                />
+                            </div>
+                        )}
                     </div>
-                )}
+                    {handleMoldura()}
+                    <button onClick={handleSave} className={styles.btnMoldura}>
+                        4) Criar Moldura
+                    </button>
+                    {imagemMesclada && (
+                        <div className={styles.downloadArea}>
+                            <a
+                                href={imagemMesclada}
+                                download="imagem_mesclada.png"
+                                className={styles.btnDownload}
+                            >
+                                5) Baixar Moldura
+                            </a>
+                        </div>
+                    )}
+
+
+                </div>
+
+
             </div>
         </div>
     )
