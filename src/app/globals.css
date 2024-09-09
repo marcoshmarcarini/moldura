@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  /* Cores Peter */
   --azul-claro: #0FB8EB;
   --azul-medio: #224194;
   --azul-escuro: #243065;
@@ -13,19 +14,39 @@
   --laranja-claro: #F39A21;
   --laranja-escuro: #EF6623;
   --branco: #FFFFFF;
+
+  /* Cores Ferraço */
+  --f-azul-escuro: #314690;
+  --f-azul-claro: #569ED8;
+  --f-amarelo-claro: #F9ED54;
+  --f-amarelo-escuro: #E9C132;
+  --f-laranja-escuro: #BC5815;
+  --f-laranja-claro: #E27A39;
+  --f-verde-escuro: #6B973C;
+  --f-verde-claro: #9FBD3E;
+
+  /* Cores Dorlei */
+  --d-azul-escuro: #144D85;
+  --d-azul-claro: #2485B5;
+  --d-laranja: #ED7D40;
+  --d-amareolo: #FDD646;
+  --d-linear-gradiente-azul: linear-gradient(90deg,
+      var(--d-azul-claro) 0%,
+      var(--d-azul-escuro) 100%);
+
+  --d-linear-gradiente-laranja: linear-gradient(90deg,
+      var(--d-amareolo) 0%,
+      var(--d-laranja) 100%);
 }
 
 
 body {
   color: var(--branco);
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      var(--azul-claro)
-    )
-    var(--azul-escuro);
-    background-repeat: no-repeat;
-    background-size: 200vw 200vh;
+      var(--azul-claro)) var(--azul-escuro);
+  background-repeat: no-repeat;
+  background-size: 200vw 200vh;
 }
 
 @layer utilities {

@@ -5,7 +5,7 @@ export default function Logo() {
     return (
         <div className={styles.logo_content}>
             <Image
-                src={`/img/peter_perfil.png`}
+                src={`/img/peter/peter_perfil.png`}
                 width={200}
                 height={200}
                 alt='Peter Costa'

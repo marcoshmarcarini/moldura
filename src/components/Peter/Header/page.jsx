@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <div className={styles.cabecalho}>
             <Image
-                src={`/img/Peter_10.png`}
+                src={`/img/peter/Peter_10.png`}
                 width={150}
                 height={50}
                 alt='Peter Costa Logo'

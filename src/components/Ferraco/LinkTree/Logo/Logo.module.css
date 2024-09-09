@@ -1,0 +1,25 @@
+.logo_content{
+    border: 20px solid var(--azul-claro);
+    max-width: fit-content;
+    border-radius: 50%;
+}
+
+.logo_img{
+    border-radius: 50%;
+    border: 20px solid var(--azul-escuro);
+}
+
+
+@media (max-width:500px) {
+    .logo_content{
+        border: 10px solid var(--azul-claro);
+        max-width: fit-content;
+        border-radius: 50%;
+    }
+    .logo_img{
+        border-radius: 50%;
+        border: 10px solid var(--azul-escuro);
+        width: 120px !important;
+        height: 120px !important;
+    }
+}

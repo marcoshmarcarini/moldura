@@ -18,7 +18,7 @@ export default function peter() {
                     className={`absolute z-[-1] w-[50%] flex justify-center items-center opacity-30`}
                 />
                 <Header />
-                <div className={`flex flex-wrap flex-row justify-center items-center gap-5 py-[50px] absolute top-0 bottom-0 left-0 right-0 z-[9999] lg:flex-row md:flex-col sm:flex-col xs:flex-col`}>
+                <div className={`flex flex-wrap flex-col justify-center items-center gap-5 py-[50px] absolute top-0 bottom-0 left-0 right-0 z-[9999] lg:flex-row md:flex-row sm:flex-row xs:flex-row md:items-center xs:items-center`}>
                     <Logo />
                     <Links />
                 </div>

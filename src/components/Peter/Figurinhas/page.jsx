@@ -2,12 +2,12 @@ import Image from "next/image"
 import styles from './Figurinhas.module.css'
 export default function Figurinhas() {
     const figurinhas = [
-        '/img/figurinhas/01.png',
-        '/img/figurinhas/02.png',
-        '/img/figurinhas/03.png',
-        '/img/figurinhas/10.png',
-        '/img/figurinhas/11.png',
-        '/img/figurinhas/13.png',
+        '/img/peter/figurinhas/01.png',
+        '/img/peter/figurinhas/02.png',
+        '/img/peter/figurinhas/03.png',
+        '/img/peter/figurinhas/10.png',
+        '/img/peter/figurinhas/11.png',
+        '/img/peter/figurinhas/13.png',
     ]
     return (
         <div className={styles.figurinha_content}>
