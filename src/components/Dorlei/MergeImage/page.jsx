@@ -65,7 +65,6 @@ export default function MergeImage() {
         reader.readAsDataURL(foto)
     }
 
-
     const handleMoldura = () => {
         if (imagem) {
             return (
