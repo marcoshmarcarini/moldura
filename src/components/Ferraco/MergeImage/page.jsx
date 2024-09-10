@@ -15,7 +15,7 @@ const poppins = Poppins({
 export default function MergeImage() {
 
     const [imagem, setImagem] = useState('')
-    const [moldura, setMoldura] = useState('/img/perfil_peter10.png')
+    const [moldura, setMoldura] = useState('/img/ferraco/moldura/moldura_ferraco01.png')
     const [imagemMesclada, setImagemMesclada] = useState(null)
     const ref1 = useRef(null)
     const ref2 = useRef(null)
@@ -23,7 +23,6 @@ export default function MergeImage() {
 
     const [personalizacao1, setPersonalizacao1] = useState([])
     const [personalizacao2, setPersonalizacao2] = useState([])
-
 
     const uploadImage = (uploadEvent) => {
         const foto = uploadEvent.target.files[0]
@@ -75,12 +74,12 @@ export default function MergeImage() {
                        3) Escolha a moldura desejada clicando na imagem abaixo.</p>
                     <div className={`flex gap-5 items-center justify-center`}>
                         <Image
-                            src="/img/perfil_peter10.png"
+                            src="/img/ferraco/moldura/moldura_ferraco01.png"
                             width={100}
                             height={100}
                             alt=""
                             onClick={() => {
-                                setMoldura('/img/perfil_peter10.png')
+                                setMoldura('/img/ferraco/moldura/moldura_ferraco01.png')
                                 setPersonalizacao1({
                                     border: '2px solid var(--branco)',
                                     transition: 'border 0.3s ease-in-out',
@@ -94,7 +93,7 @@ export default function MergeImage() {
                             style={personalizacao1}
                             className={styles.imgMoldura}
                         />
-                        <Image
+                        {/* <Image
                             src="/img/perfil_hashtag.png"
                             width={100}
                             height={100}
@@ -113,7 +112,7 @@ export default function MergeImage() {
                             }}
                             style={personalizacao2}
                             className={styles.imgMoldura}
-                        />
+                        /> */}
                     </div>
                 </div>
             )

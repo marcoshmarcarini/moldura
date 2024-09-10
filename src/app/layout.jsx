@@ -12,7 +12,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
+      <head>
+        <title>To com o Peter</title>
+        <link rel="icon" href="/favicon-peter.ico" />
+        </head>
       <body className={`${inter.className}`}>{children}</body>
     </html>
   );

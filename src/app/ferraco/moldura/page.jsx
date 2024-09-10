@@ -1,6 +1,6 @@
 'use client'
 
-import MergeImage from "@/components/Peter/MergeImage/page"
+import MergeImage from "@/components/Ferraco/MergeImage/page"
 
 export default function Home() {
   
