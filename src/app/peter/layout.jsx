@@ -1,10 +1,12 @@
+import Head from "next/head";
+
 export default function PeterLayout({ children }) {
     return (
         <>
-            <head>
+            <Head>
                 <title>To com Peter</title>
                 <link rel="icon" href="/favicon-peter.ico" sizes="any"/>
-            </head>
+            </Head>
             <body style={{overflow: 'hidden'}}>
                 {children}
             </body>

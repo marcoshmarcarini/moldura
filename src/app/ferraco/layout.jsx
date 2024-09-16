@@ -1,10 +1,12 @@
+import Head from "next/head";
+
 export default function FerracoLayout({ children }) {
     return (
         <>
-            <head>
+            <Head>
                 <title>To com Ferraço</title>
                 <link rel="icon" href="/favicon-ferraco.ico" sizes="any"/>
-            </head>
+            </Head>
             <body style={{
                 overflow: 'hidden',
                 background: 'linear-gradient(to bottom,transparent,var(--f-azul-claro))var(--f-azul-escuro)',
