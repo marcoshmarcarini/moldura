@@ -6,6 +6,9 @@ export default function FerracoLayout({ children }) {
             <Head>
                 <title>To com Ferraço</title>
                 <link rel="icon" href="/favicon-ferraco.ico" sizes="any"/>
+                <meta property="og:title" content="To com Ferraço" />
+                <meta property="og:description" content="Apoio ao Ferraço nas eleições." />
+                <meta property="og:image" content="/favicon-ferraco.ico" />
             </Head>
             <body style={{
                 overflow: 'hidden',

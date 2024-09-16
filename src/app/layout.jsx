@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br">
       <Head>
         <title>Entre na campanha</title>
+        <meta property="og:title" content="Título do Site Principal" />
       </Head>
       <body className={`${inter.className}`}>{children}</body>
     </html>
