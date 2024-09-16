@@ -1,6 +1,6 @@
 export default function DorleiLayout({ children }) {
     return (
-        <html lang="pt-br">
+        <>
             <head>
                 <title>To com Dorlei</title>
                 <link rel="icon" href="/favicon-dorlei.ico" sizes="any"/>
@@ -11,6 +11,6 @@ export default function DorleiLayout({ children }) {
             }}>
                 {children}
             </body>
-        </html>
+        </>
     )
 }

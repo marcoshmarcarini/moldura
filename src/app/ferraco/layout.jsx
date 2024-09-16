@@ -1,6 +1,6 @@
 export default function FerracoLayout({ children }) {
     return (
-        <html lang="pt-br">
+        <>
             <head>
                 <title>To com Ferraço</title>
                 <link rel="icon" href="/favicon-ferraco.ico" sizes="any"/>
@@ -11,6 +11,6 @@ export default function FerracoLayout({ children }) {
             }}>
                 {children}
             </body>
-        </html>
+        </>
     )
 }
