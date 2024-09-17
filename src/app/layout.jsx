@@ -14,18 +14,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   const [title, setTitle] = useState("Entre na Campanha")
-  const router = location.pathname
-  console.log(router)
+  const router = useRouter()
+  console.log(router.pathname)
 
 
   useEffect(() => {
     handleRouter()
 
-  }, [router])
+  }, [router.pathname])
 
 
   const handleRouter = () => {
-    switch (router) {
+    switch (router.pathname) {
       case "/peter" || "/peter/moldura":
         setTitle("To com Peter")
         return (
