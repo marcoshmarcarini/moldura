@@ -88,7 +88,10 @@ export default function RootLayout({ children }) {
                 href="/favicon-ferraco.ico"
                 sizes="any"
               />
+
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
+              <meta property="ogg:image" content="/favicon-ferraco.ico" />
+
             </head>
             <body
               className={`${inter.className}`}
