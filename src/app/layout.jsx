@@ -19,8 +19,6 @@ export default function RootLayout({ children }) {
 
 
   useEffect(() => {
-
-
     handleRouter()
 
   }, [router])
@@ -29,11 +27,12 @@ export default function RootLayout({ children }) {
   const handleRouter = () => {
     switch (router) {
       case "/peter" || "/peter/moldura":
+        setTitle("To com Peter")
         return (
           <html lang="pt-br">
             <head>
               <title>
-                To com Peter
+                {title}
               </title>
               <link
                 rel="icon"
@@ -51,11 +50,12 @@ export default function RootLayout({ children }) {
         )
         break
       case "/dorlei" || "/dorlei/moldura":
+        setTitle("To com Dorlei")
         return (
           <html lang="pt-br">
             <head>
               <title>
-                To com Dorlei
+                {title}
               </title>
               <link
                 rel="icon"
@@ -76,11 +76,12 @@ export default function RootLayout({ children }) {
         )
         break
       case "/ferraco" || "ferraco/moldura":
+        setTitle("To com Ferraco")
         return (
           <html lang="pt-br">
             <head>
               <title>
-                To com Ferra Couto
+                {title}
               </title>
               <link
                 rel="icon"
@@ -105,7 +106,7 @@ export default function RootLayout({ children }) {
           <html lang="pt-br">
             <head>
               <title>
-                Entre na campanha
+                {title}
               </title>
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
             </head>
