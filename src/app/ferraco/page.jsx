@@ -12,7 +12,7 @@ export default function ferraco() {
                     src={`/img/ferraco/11.png`}
                     width={3000}
                     height={3000}
-                    alt='Peter 10'
+                    alt='Ferraco 11'
                     className={`absolute z-[-1] w-[100%] flex justify-center items-center opacity-30 sm:w-[50%] xs:w-[50%]`}
                 />
                 <Header />

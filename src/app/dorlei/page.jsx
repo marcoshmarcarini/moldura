@@ -13,7 +13,7 @@ export default function dorlei() {
                 src={`/img/ferraco/11.png`}
                 width={3000}
                 height={3000}
-                alt='Dorlei'
+                alt='Dorlei 40'
                 className={`absolute z-[-1] w-[100%] flex justify-center items-center opacity-30 sm:w-[50%] xs:w-[50%]`}
             />
             <Header />
