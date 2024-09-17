@@ -78,13 +78,13 @@ export default function RootLayout({ children }) {
               </title>
               <link
                 rel="icon"
-                href="/ferraco.ico"
+                href="/favicon-ferraco.ico"
                 sizes="any"
               />
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
               <meta property="og:title" content={`To com Ferraço`} />
               <meta property="og:description" content={`Apoie a campanha`} />
-              <meta property="og:image" content={`/favicon-ferraco.png`} />
+              <meta property="og:image" content={`/ferraco.png`} />
             </head>
             <body
               className={`${inter.className}`}
