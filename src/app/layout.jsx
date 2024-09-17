@@ -109,6 +109,11 @@ export default function RootLayout({ children }) {
                 {title}
               </title>
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
+              <link
+                rel="icon"
+                href="/favicon.ico"
+                sizes="any"
+              />
             </head>
             <body className={`${inter.className}`}>
               {children}
