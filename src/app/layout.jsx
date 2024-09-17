@@ -14,13 +14,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   const router = usePathname()
-  console.log(router)
-
 
   useEffect(() => {
     handleRouter()
   }, [router])
-
 
   const handleRouter = () => {
     switch (router) {
@@ -38,6 +35,8 @@ export default function RootLayout({ children }) {
                 sizes="any"
               />
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
+              <meta property="og:title" content={`To com Peter`} />
+              <meta property="og:description" content={`Apoie a campanha`} />
             </head>
             <body
               className={`${inter.className}`}
@@ -60,6 +59,8 @@ export default function RootLayout({ children }) {
                 sizes="any"
               />
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
+              <meta property="og:title" content={`To com Dorlei`} />
+              <meta property="og:description" content={`Apoie a campanha`} />
             </head>
             <body
               className={`${inter.className}`}
