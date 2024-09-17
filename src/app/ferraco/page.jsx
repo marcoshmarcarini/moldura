@@ -3,12 +3,10 @@ import Logo from "@/components/Ferraco/LinkTree/Logo/page"
 import Header from "@/components/Ferraco/Header/page"
 import Links from "@/components/Ferraco/LinkTree/Links/page"
 import Figurinhas from "@/components/Ferraco/Figurinhas/page"
-import FerracoLayout from "./layout"
 
 
 export default function ferraco() {
     return (
-        <FerracoLayout>
             <div className={`py-5 px-3 flex flex-col gap-5 h-screen `}>
                 <Image
                     src={`/img/ferraco/11.png`}
@@ -24,6 +22,5 @@ export default function ferraco() {
                 </div>
                 <Figurinhas className={`flex justify-center items-center overflow-hidden`} />
             </div>
-        </FerracoLayout>
     )
 }
