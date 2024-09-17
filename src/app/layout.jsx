@@ -1,7 +1,7 @@
 'use client'
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { useEffect} from "react"
+import { useEffect } from "react"
 import { usePathname } from "next/navigation"
 
 
@@ -17,8 +17,35 @@ export default function RootLayout({ children }) {
 
   const handleRouter = () => {
     switch (router) {
+      case "/ferraco":
+        return (
+          <html lang="pt-br">
+            <head>
+              <title>
+                To com Ferraço
+              </title>
+              <link
+                rel="icon"
+                href="/favicon-ferraco.ico"
+                sizes="any"
+              />
+              <meta name="authors" content="Marcos Henrique Marcarini Junior" />
+              <meta property="og:title" content={`To com Ferraço`} />
+              <meta property="og:description" content={`Apoie a campanha`} />
+              <meta property="og:image" content={`https://www.entrenacampanha.com.br/ferraco.png`} />
+            </head>
+            <body
+              className={`${inter.className}`}
+              style={{
+                overflow: 'hidden',
+                background: 'linear-gradient(to bottom,transparent,var(--f-azul-claro))var(--f-azul-escuro)',
+              }}>
+              {children}
+            </body>
+          </html>
+        )
+        break
       case "/peter":
-
         return (
           <html lang="pt-br">
             <head>
@@ -69,34 +96,7 @@ export default function RootLayout({ children }) {
           </html>
         )
         break
-      case "/ferraco":
-        return (
-          <html lang="pt-br">
-            <head>
-              <title>
-                To com Ferraço
-              </title>
-              <link
-                rel="icon"
-                href="/favicon-ferraco.ico"
-                sizes="any"
-              />
-              <meta name="authors" content="Marcos Henrique Marcarini Junior" />
-              <meta property="og:title" content={`To com Ferraço`} />
-              <meta property="og:description" content={`Apoie a campanha`} />
-              <meta property="og:image" content={`https://www.entrenacampanha.com.br/ferraco.png`} />
-            </head>
-            <body
-              className={`${inter.className}`}
-              style={{
-                overflow: 'hidden',
-                background: 'linear-gradient(to bottom,transparent,var(--f-azul-claro))var(--f-azul-escuro)',
-              }}>
-              {children}
-            </body>
-          </html>
-        )
-        break
+
       default:
         return (
           <html lang="pt-br">
