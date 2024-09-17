@@ -90,7 +90,11 @@ export default function RootLayout({ children }) {
               />
 
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
-              <meta property="ogg:image" content="/favicon-ferraco.ico" />
+              <meta property="og:type" content="website" />
+              <meta property="og:url" content="https://ferraco11.com.br" />
+              <meta property="og:title" content="To com Ferraço" />
+              <meta property="og:description" content="Apoie Theodorico Ferraço para as eleições de 2024 em Cachoeiro de Itapemirim. Entre na campanha!" />
+              <meta property="og:image" content="/favicon-ferraco.ico" />
 
             </head>
             <body
