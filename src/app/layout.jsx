@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
               </title>
               <link
                 rel="icon"
-                href="/favicon-ferraco.ico"
+                href="/favicon-ferraco.png"
                 sizes="any"
               />
               <meta name="authors" content="Marcos Henrique Marcarini Junior" />
