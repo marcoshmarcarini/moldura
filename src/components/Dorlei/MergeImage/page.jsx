@@ -15,7 +15,7 @@ const poppins = Poppins({
 export default function MergeImage() {
 
     const [imagem, setImagem] = useState('')
-    const [moldura, setMoldura] = useState('')
+    const [moldura, setMoldura] = useState('/img/dorlei/moldura/moldura_dorlei01.png')
     const [imagemMesclada, setImagemMesclada] = useState(null)
     const ref1 = useRef(null)
     const ref2 = useRef(null)
