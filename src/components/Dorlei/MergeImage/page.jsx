@@ -15,7 +15,7 @@ const poppins = Poppins({
 export default function MergeImage() {
 
     const [imagem, setImagem] = useState('')
-    const [moldura, setMoldura] = useState('/img/peter/perfil_peter10.png')
+    const [moldura, setMoldura] = useState('')
     const [imagemMesclada, setImagemMesclada] = useState(null)
     const ref1 = useRef(null)
     const ref2 = useRef(null)
@@ -69,9 +69,9 @@ export default function MergeImage() {
         if (imagem) {
             return (
                 <div className={`flex flex-col gap-5 items-center justify-center text-center`}>
-                    
+
                     <p className={styles.switchMoldura}>
-                       3) Escolha a moldura desejada clicando na imagem abaixo.</p>
+                        3) Escolha a moldura desejada clicando na imagem abaixo.</p>
                     <div className={`flex gap-5 items-center justify-center`}>
                         <Image
                             src="/img/dorlei/moldura/moldura_dorlei01.png"
@@ -142,7 +142,7 @@ export default function MergeImage() {
         <div className={`${poppins.className}`}>
             <div className={styles.molduraContent}>
                 <p className={styles.molduraTxt}>
-                   1) Anexe uma imagem abaixo e crie sua moldura personalizada.
+                    1) Anexe uma imagem abaixo e crie sua moldura personalizada.
                 </p>
                 <div className={styles.inputContent}>
                     <label
